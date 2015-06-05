@@ -48,7 +48,7 @@ class Migration(SchemaMigration):
             ('flag', models.ForeignKey(orm['waffle.flag'], null=False)),
             ('user', models.ForeignKey(get_user_model(), null=False))
         ))
-        db.create_unique('waffle_flag_users', ['flag_id', 'user_id'])
+        db.create_unique('waffle_flag_users', ['flag_id', 'newtenduser_id'])
 
         # Adding model 'Switch'
         db.create_table('waffle_switch', (
